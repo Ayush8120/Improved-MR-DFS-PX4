@@ -22,13 +22,13 @@ In case you feel stuck with the steps here is a YouTube video to sail you throug
 
 [Step 3](https://docs.px4.io/master/en/simulation/multi_vehicle_simulation_gazebo.html) Multiple Vehicles with ROS and Gazebo 
 ---
-Clone the PX4-Autopilot Git Repository[link](https://github.com/PX4/PX4-Autopilot)
-        cd Firmware_clone
-	git submodule update --init --recursive
-	DONT_RUN=1 make px4_sitl_default gazebo
-	source Tools/setup_gazebo.bash $(pwd) $(pwd)/build/px4_sitl_default
-	export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd):$(pwd)/Tools/sitl_gazebo
-	roslaunch px4 multi_uav_mavros_sitl.launch
+	Clone the PX4-Autopilot Git Repository[link](https://github.com/PX4/PX4-Autopilot)
+		cd Firmware_clone
+		git submodule update --init --recursive
+		DONT_RUN=1 make px4_sitl_default gazebo
+		source Tools/setup_gazebo.bash $(pwd) $(pwd)/build/px4_sitl_default
+		export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd):$(pwd)/Tools/sitl_gazebo
+		roslaunch px4 multi_uav_mavros_sitl.launch
 ---
 
 - Replace empty.world in the Tools/sitl_gazebo/worlds with [this](link to empty.world)
@@ -40,4 +40,4 @@ The algorith has its implementation in [MATLAB](link) but in this repository we 
 roslaunch px4 multi_uav_macros_sitl.launch
 roslaunch ayush best.launch 
 
-This will launch the empty world contatining nodes and a bsic implementation of the algorithm
+This will launch the empty world contatining nodes and a basic implementation of the algorithm
