@@ -1,0 +1,6 @@
+<launch>
+<node name="offb_node0" pkg="ayush" type="uav0.py" output="screen"></node>
+<node name="offb_node1" pkg="ayush" type="uav1.py" output="screen"></node>
+<node name="offb_node2" pkg="ayush" type="uav2.py" output="screen"></node>
+<node name="offb_node3" pkg="ayush" type="uav3.py" output="screen"></node>
+</launch>

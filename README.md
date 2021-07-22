@@ -2,6 +2,9 @@
 Improved Multi-Robot Depth First Search Algorithm implementation using iris drones using PX4.
 Performed on Ubuntu 18.04 - Gazebo 9
 
+The algorith has its implementation in [MATLAB](link) but in this repository we focus on python + ROS + Gazebo simulations
+
+
 [Step 1](https://docs.px4.io/master/en/ros/mavros_installation.html) MAVROS installation
 In case you feel stuck with the steps here is a YouTube video to sail you through this step -[Video](https://www.youtube.com/watch?v=jBTikChu02E) 
 
@@ -31,13 +34,17 @@ In case you feel stuck with the steps here is a YouTube video to sail you throug
 		roslaunch px4 multi_uav_mavros_sitl.launch
 ---
 
+-------------
 - Replace empty.world in the Tools/sitl_gazebo/worlds with [this](link to empty.world)
 - Add the landing_station model in Tools/sitl_gazebo/models {these are repsonsible for the landing markers}
 - replace [these](link to launch folder) launch files with the ones already present in launch folder in PX4 git clone
+- make a catkin workspace and add ayush package to it. This contains all code and nodes that need to be run for simulation
+-------------
 
-The algorith has its implementation in [MATLAB](link) but in this repository we focus on python + ROS + Gazebo simulations
-
-roslaunch px4 multi_uav_macros_sitl.launch
-roslaunch ayush best.launch 
-
+---
+	roslaunch px4 multi_uav_macros_sitl.launch
+	roslaunch ayush best.launch 
+---
 This will launch the empty world contatining nodes and a basic implementation of the algorithm
+
+

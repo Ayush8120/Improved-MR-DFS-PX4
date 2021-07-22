@@ -1,0 +1,21 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/ayush8120/catkin_arms/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/ayush8120/catkin_arms/src/mavros/libmavconn/include/**",
+        "/home/ayush8120/catkin_arms/src/mavros/mavros/include/**",
+        "/home/ayush8120/catkin_arms/src/mavros/mavros_msgs/include/**",
+        "/home/ayush8120/catkin_arms/src/mavros/test_mavros/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}
