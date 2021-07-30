@@ -4,6 +4,10 @@ Performed on Ubuntu 18.04 - Gazebo 9
 
 
 ![City Simulation](https://user-images.githubusercontent.com/72944387/127709780-9815dd77-4814-47a5-8d11-b823ca944dca.mp4) 
+[City Simulation](https://youtu.be/0yq5XbTRqt4)
+
+https://user-images.githubusercontent.com/72944387/127710362-c381c48e-98b4-404c-879e-27c8fcb8d026.mp4
+
 
 
 The algorith has its implementation in [MATLAB](link) but in this repository we focus on python + ROS + Gazebo simulations
