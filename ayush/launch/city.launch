@@ -1,0 +1,12 @@
+<launch>
+<node name="offb_node0" pkg="ayush" type="uav_city_0.py" output="screen"></node>
+<node name="offb_node1" pkg="ayush" type="uav_city_1.py" output="screen"></node>
+<node name="offb_node2" pkg="ayush" type="uav_city_2.py" output="screen"></node>
+<node name="offb_node3" pkg="ayush" type="uav_city_3.py" output="screen"></node>
+<node name="offb_node4" pkg="ayush" type="uav_city_4.py" output="screen"></node>
+<node name="offb_node5" pkg="ayush" type="uav_city_5.py" output="screen"></node>
+<node name="offb_node6" pkg="ayush" type="uav_city_6.py" output="screen"></node>
+<node name="offb_node7" pkg="ayush" type="uav_city_7.py" output="screen"></node>
+<node name="offb_node8" pkg="ayush" type="uav_city_8.py" output="screen"></node>
+<node name="offb_node9" pkg="ayush" type="uav_city_9.py" output="screen"></node>
+</launch>

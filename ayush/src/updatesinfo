@@ -1,0 +1,16 @@
+uav_city_0.py is the 0th UAV node.
+
+
+We still need to design a base station for start and land of the drones.  
+Chnage the spawn locations in the launch files
+change the initial substraction cordinates according to spawn points
+create a launch file
+
+
+
+this will contain both the simulations. City + Blend
+
+PX4 mai se landing_station model delete kar diya hai.
+
+
+  

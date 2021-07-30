@@ -1,0 +1,82 @@
+multiplying by 50
+now multiplying by 1.5
+
+The node cordinates in world file are just for simulation purpose
+the XData oioin the code will remain original only
+another list will be made : XDataPro : this contains node location that are corresponding to the simulation cordinates.Just so that when giving setpoints we know where to command it to go
+
+
+
+<point>1 1 0</point> 
+<point>1 1 0</point> 
+<point>1 1 0</point> 
+<point>1 1 0</point> 
+<point>1 1 0</point> 
+<point>1 1 0</point> 
+<point>1 1 0</point> 
+<point>1 1 0</point> 
+<point>1 1 0</point>
+<point>1 1 0</point> 
+<point>1 1 0</point> 
+<point>1 1 0</point> 
+<point>1 1 0</point> 
+<point>1 1 0</point> 
+<point>1 1 0</point> 
+
+<point>1 1 0</point> 
+<point>1 1 0</point> 
+<point>1 1 0</point> 
+<point>1 1 0</point> 
+<point>1 1 0</point> 
+<point>1 1 0</point> 
+<point>1 1 0</point> 
+<point>1 1 0</point> 
+ 
+A- 125 50 0 
+B- 175 50 0
+C- 150 100 0
+D- 150 150 0
+E-150 200 0
+F-75 250 0
+G-75 300 0
+H-75 350 0
+I-50 400 0
+J-100 400 0
+K-175 250 0
+L-150 300 0
+M-125 350 0
+N-175 350 0
+O-225 300 0
+P-225 350 0
+Q-175 400 0
+R-175 450 0
+S-250 400 0
+T-225 450 0
+U-275 450 0
+V-275 500 0
+W-250 550 0
+X-300 550 0
+
+AC - R1 +
+BC - R3 =  
+CD - R1 +
+DE - R1 +
+EF - R1 +
+EK - R2 )  
+FG - R1 +
+GH - R1 +
+HI - R1 +
+HJ - R4 %
+KL - R2 )
+KO - R5 \
+LM - R2 )
+LN - R6 o
+OP - R5 \
+PQ - R5 \
+PS - R7 ]
+QR - R5 \
+ST - R7 ]
+SU - R8
+UV - R8
+VW - R8
+VX - R9
