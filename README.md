@@ -1,6 +1,8 @@
 # Improved-MR-DFS-PX4
 Improved Multi-Robot Depth First Search Algorithm implementation using iris drones using PX4.
 Performed on Ubuntu 18.04 - Gazebo 9
+![City Simulation](https://user-images.githubusercontent.com/72944387/127709780-9815dd77-4814-47a5-8d11-b823ca944dca.mp4) 
+
 
 The algorith has its implementation in [MATLAB](link) but in this repository we focus on python + ROS + Gazebo simulations
 
