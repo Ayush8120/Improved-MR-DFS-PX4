@@ -1,0 +1,181 @@
+<?xml version="1.0" ?>
+<sdf version='1.6'>
+  <world name='default'>
+    <scene>
+      <sky>
+        <clouds>
+          <speed>12</speed>
+        </clouds>
+      </sky>
+      <grid>0</grid>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>0</shadows>
+    </scene>
+    <include>
+      <uri>model://grass</uri>
+      <pose>200 250 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <!-- 
+<light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+-->
+<!--    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+-->
+<!--
+    <model name='ground'>
+      <link name='body'>
+        <collision name='geom'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>1 1</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+    </model>
+
+-->
+    <road name='my_road1'>
+      <width>7.34</width>
+      <point>125 50 0.5</point>
+      <point>150 100 0.5</point>
+      <point>150 150 0.5</point>
+      <point>150 200 0.5</point>
+      <point>75 250 0.5</point>
+      <point>75 300 0.5</point>
+      <point>75 350 0.5</point>
+      <point>50 400 0.5</point>
+    </road>
+    <road name='my_road2'>
+      <width>7.34</width>
+      <point>150 200 0.5</point>
+      <point>175 250 0.5</point>
+      <point>150 300 0.5</point>
+      <point>125 350 0.5</point>
+    </road>
+    <road name='my_road3'>
+      <width>7.34</width>
+      <point>175 50 0.5</point>
+      <point>150 100 0.5</point>
+    </road>
+    <road name='my_road4'>
+      <width>7.34</width>
+      <point>75 350 0.5</point>
+      <point>100 400 0.5</point>
+    </road>
+    <road name='my_road5'>
+      <width>7.34</width>
+      <point>175 250 0.5</point>
+      <point>225 300 0.5</point>
+      <point>225 350 0.5</point>
+      <point>175 400 0.5</point>
+      <point>175 450 0.5</point>
+    </road>
+    <road name='my_road6'>
+      <width>7.34</width>
+      <point>150 300 0.5</point>
+      <point>175 350 0.5</point>
+    </road>
+    <road name='my_road7'>
+      <width>7.34</width>
+      <point>225 350 0.5</point>
+      <point>250 400 0.5</point>
+      <point>225 450 0.5</point>
+    </road>
+    <road name='my_road8'>
+      <width>7.34</width>
+      <point>250 400 0.5</point>
+      <point>275 450 0.5</point>
+      <point>275 500 0.5</point>
+      <point>250 550 0.5</point>
+    </road>
+    <road name='my_road9'>
+      <width>7.34</width>
+      <point>275 500 0.5</point>
+      <point>300 550 0.5</point>
+    </road>
+
+
+    <physics name='default_physics' default='0' type='ode'>
+      <gravity>0 0 -9.8066</gravity>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>10</iters>
+          <sor>1.3</sor>
+          <use_dynamic_moi_rescaling>0</use_dynamic_moi_rescaling>
+        </solver>
+        <constraints>
+          <cfm>0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>100</contact_max_correcting_vel>
+          <contact_surface_layer>0.001</contact_surface_layer>
+        </constraints>
+      </ode>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+      <magnetic_field>6.0e-6 2.3e-5 -4.2e-5</magnetic_field>
+    </physics>
+<!--
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+-->
+
+    <include>
+      <name>police_station</name>
+      <uri>model://police_station</uri>
+      <pose>-22.14756 282.449707 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>mat</name>
+      <uri>model://mat</uri>
+      <pose>-22.602747 282.532471 8.63773 0 -0 0</pose>
+    </include>
+
+  </world>
+</sdf>
