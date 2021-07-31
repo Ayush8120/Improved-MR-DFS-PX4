@@ -9,7 +9,7 @@ Performed on Ubuntu 18.04 - Gazebo 9
 #City Tree Structure
 
 
-https://github.com/Ayush8120/Improved-MR-DFS-PX4/blob/main/City%20Simulation/City%20map/MATLAB-map.jpg
+https://user-images.githubusercontent.com/72944387/127738425-48e0018a-57c9-4310-83b7-173cfb439662.jpg
 
 #City-Simulation
 
