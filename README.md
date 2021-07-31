@@ -6,12 +6,7 @@ Performed on Ubuntu 18.04 - Gazebo 9
 
 [YouTube Video - City Simulation](https://youtu.be/0yq5XbTRqt4)
 
-#City Tree Structure
 
-
-https://user-images.githubusercontent.com/72944387/127738425-48e0018a-57c9-4310-83b7-173cfb439662.jpg
-
-#City-Simulation
 
 https://user-images.githubusercontent.com/72944387/127710362-c381c48e-98b4-404c-879e-27c8fcb8d026.mp4
 
@@ -62,4 +57,24 @@ In case you feel stuck with the steps here is a YouTube video to sail you throug
 ---
 This will launch the empty world contatining nodes and a basic implementation of the algorithm
 
+
+
+
+
+
+
+
+
+
+-------------------------
+#City Simulation
+
+In ayush package there are 10 nodes corresponding to 10 UAVs used for city simulation.
+Other required files for the city simulation are kept in City Simulation folder.
+- Add the world files
+- Replace the launch file
+- Models of Police Station, landing mat and grass plane are kept in the models file. Add them to your models folder at the location PX4-firware-clone/Tools/sitl_gazebo/models
+
+The tree structure's cordinates were calculated using a MATLAB program (link to the MATLAB repository - with the 10 leaf node program)
+https://user-images.githubusercontent.com/72944387/127738425-48e0018a-57c9-4310-83b7-173cfb439662.jpg
 
