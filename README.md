@@ -76,5 +76,7 @@ Other required files for the city simulation are kept in City Simulation folder.
 - Models of Police Station, landing mat and grass plane are kept in the models file. Add them to your models folder at the location PX4-firware-clone/Tools/sitl_gazebo/models
 
 The tree structure's cordinates were calculated using a MATLAB program (link to the MATLAB repository - with the 10 leaf node program)
+
+
 https://user-images.githubusercontent.com/72944387/127738425-48e0018a-57c9-4310-83b7-173cfb439662.jpg
 
