@@ -1,0 +1,213 @@
+The 0 robot is currently at A
+The next node chosen is C
+The next edge selected by - 0- robot isCD
+
+The 1 robot is currently at B
+The next node chosen is C
+The next edge selected by - 1- robot isCD
+
+The 2 robot is currently at I
+The next node chosen is H
+The next edge selected by - 2- robot isHJ
+
+The 3 robot is currently at J
+The next node chosen is H
+The next edge selected by - 3- robot isGH
+
+The 4 robot is currently at M
+The next node chosen is L
+The next edge selected by - 4- robot isLN
+
+The 5 robot is currently at N
+The next node chosen is L
+The next edge selected by - 5- robot isKL
+
+The 6 robot is currently at R
+The next node chosen is Q
+The next edge selected by - 6- robot isPQ
+
+The 7 robot is currently at T
+The next node chosen is S
+The next edge selected by - 7- robot isSU
+
+The 8 robot is currently at W
+The next node chosen is V
+The next edge selected by - 8- robot isVX
+
+The 9 robot is currently at X
+The next node chosen is V
+The next edge selected by - 9- robot isUV
+
+This is the loop part which continues till the declaration of completion
+0 robot Travelling to the selected edge :CD
+The next edge selected by : 0 : robot is :DE
+
+1 robot Travelling to the selected edge :CD
+The next edge selected by : 1 : robot is :DE
+
+2 robot Travelling to the selected edge :HJ
+The next edge selected by : 2 : robot is :JH
+
+3 robot Travelling to the selected edge :GH
+The next edge selected by : 3 : robot is :FG
+
+4 robot Travelling to the selected edge :LN
+The next edge selected by : 4 : robot is :NL
+
+5 robot Travelling to the selected edge :KL
+The next edge selected by : 5 : robot is :KO
+
+6 robot Travelling to the selected edge :PQ
+The next edge selected by : 6 : robot is :PS
+
+7 robot Travelling to the selected edge :SU
+The next edge selected by : 7 : robot is :UV
+
+8 robot Travelling to the selected edge :VX
+The next edge selected by : 8 : robot is :XV
+
+9 robot Travelling to the selected edge :UV
+The next edge selected by : 9 : robot is :US
+
+0 robot Travelling to the selected edge :DE
+The next edge selected by : 0 : robot is :EK
+
+1 robot Travelling to the selected edge :DE
+The next edge selected by : 1 : robot is :EF
+
+2 robot Travelling to the selected edge :JH
+The next edge selected by : 2 : robot is :GH
+
+3 robot Travelling to the selected edge :FG
+The next edge selected by : 3 : robot is :EF
+
+4 robot Travelling to the selected edge :NL
+The next edge selected by : 4 : robot is :KL
+
+5 robot Travelling to the selected edge :KO
+The next edge selected by : 5 : robot is :OP
+
+6 robot Travelling to the selected edge :PS
+The next edge selected by : 6 : robot is :SP
+
+7 robot Travelling to the selected edge :UV
+The next edge selected by : 7 : robot is :VU
+
+8 robot Travelling to the selected edge :XV
+The next edge selected by : 8 : robot is :VU
+
+9 robot Travelling to the selected edge :US
+The next edge selected by : 9 : robot is :SP
+
+0 robot Travelling to the selected edge :EK
+The next edge selected by : 0 : robot is :KE
+
+1 robot Travelling to the selected edge :EF
+The next edge selected by : 1 : robot is :FE
+
+2 robot Travelling to the selected edge :GH
+The next edge selected by : 2 : robot is :FG
+
+3 robot Travelling to the selected edge :EF
+The next edge selected by : 3 : robot is :EK
+
+4 robot Travelling to the selected edge :KL
+The next edge selected by : 4 : robot is :KE
+
+5 robot Travelling to the selected edge :OP
+The next edge selected by : 5 : robot is :PO
+
+6 robot Travelling to the selected edge :SP
+The next edge selected by : 6 : robot is :PO
+
+7 robot Travelling to the selected edge :VU
+The next edge selected by : 7 : robot is :US
+
+8 robot Travelling to the selected edge :VU
+The next edge selected by : 8 : robot is :US
+
+9 robot Travelling to the selected edge :SP
+The next edge selected by : 9 : robot is :PO
+
+0 robot Travelling to the selected edge :KE
+The next edge selected by : 0 : robot is :EK
+
+1 robot Travelling to the selected edge :FE
+The next edge selected by : 1 : robot is :EK
+
+2 robot Travelling to the selected edge :FG
+The next edge selected by : 2 : robot is :FE
+
+3 robot Travelling to the selected edge :EK
+The next edge selected by : 3 : robot is :KO
+
+4 robot Travelling to the selected edge :KE
+The next edge selected by : 4 : robot is :EK
+
+5 robot Travelling to the selected edge :PO
+The next edge selected by : 5 : robot is :OK
+
+6 robot Travelling to the selected edge :PO
+The next edge selected by : 6 : robot is :OK
+
+7 robot Travelling to the selected edge :US
+The next edge selected by : 7 : robot is :SP
+
+8 robot Travelling to the selected edge :US
+The next edge selected by : 8 : robot is :SP
+
+9 robot Travelling to the selected edge :PO
+The next edge selected by : 9 : robot is :OK
+
+0 robot Travelling to the selected edge :EK
+The next edge selected by : 0 : robot is :KO
+
+1 robot Travelling to the selected edge :EK
+The next edge selected by : 1 : robot is :KO
+
+2 robot Travelling to the selected edge :FE
+The next edge selected by : 2 : robot is :EK
+
+3 robot Travelling to the selected edge :KO
+Exploration done for the robot number: 3
+4 robot Travelling to the selected edge :EK
+The next edge selected by : 4 : robot is :KO
+
+5 robot Travelling to the selected edge :OK
+The next edge selected by : 5 : robot is :KO
+
+6 robot Travelling to the selected edge :OK
+The next edge selected by : 6 : robot is :KO
+
+7 robot Travelling to the selected edge :SP
+The next edge selected by : 7 : robot is :PO
+
+8 robot Travelling to the selected edge :SP
+The next edge selected by : 8 : robot is :PO
+
+9 robot Travelling to the selected edge :OK
+Exploration done for the robot number: 9
+
+0 robot Travelling to the selected edge :KO
+Exploration done for the robot number: 0
+
+1 robot Travelling to the selected edge :KO
+Exploration done for the robot number: 1
+
+2 robot Travelling to the selected edge :EK
+Exploration done for the robot number: 2
+
+4 robot Travelling to the selected edge :KO
+Exploration done for the robot number: 4
+
+5 robot Travelling to the selected edge :KO
+Exploration done for the robot number: 5
+
+6 robot Travelling to the selected edge :KO
+Exploration done for the robot number: 6
+
+7 robot Travelling to the selected edge :PO
+Exploration done for the robot number: 7
+
+8 robot Travelling to the selected edge :PO
+Exploration done for the robot number: 8

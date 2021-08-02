@@ -1,3 +1,12 @@
+What are the updates?
+- I have trajectory of all the drones; have individual trajectory as well
+- I have the node names as their setpoints list {R[k].path} 
+- I have the program in mR-DFS that gives me the necessary understanding links of how the algorithm functions
+- have to think how to present it beautifully
+
+
+Add the city.launch in this launch folder.
+
 multiplying by 50
 
 
