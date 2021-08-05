@@ -211,3 +211,15 @@ Exploration done for the robot number: 7
 
 8 robot Travelling to the selected edge :PO
 Exploration done for the robot number: 8
+
+
+['Base Station', 'A', 'C', 'D', 'E', 'K', 'E', 'K', 'O', 'Base Station']
+['Base Station', 'B', 'C', 'D', 'E', 'F', 'E', 'K', 'O', 'Base Station']
+['Base Station', 'I', 'H', 'J', 'H', 'G', 'F', 'E', 'K', 'Base Station']
+['Base Station', 'J', 'H', 'G', 'F', 'E', 'K', 'O', 'Base Station']
+['Base Station', 'M', 'L', 'N', 'L', 'K', 'E', 'K', 'O', 'Base Station']
+['Base Station', 'N', 'L', 'K', 'O', 'P', 'O', 'K', 'O', 'Base Station']
+['Base Station', 'R', 'Q', 'P', 'S', 'P', 'O', 'K', 'O', 'Base Station']
+['Base Station', 'T', 'S', 'U', 'V', 'U', 'S', 'P', 'O', 'Base Station']
+['Base Station', 'W', 'V', 'X', 'V', 'U', 'S', 'P', 'O', 'Base Station']
+['Base Station', 'X', 'V', 'U', 'S', 'P', 'O', 'K', 'Base Station']
