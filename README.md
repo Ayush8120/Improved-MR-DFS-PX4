@@ -6,11 +6,7 @@ Performed on Ubuntu 18.04 - Gazebo 9
 
 [YouTube Video - City Simulation](https://youtu.be/0yq5XbTRqt4)
 
-
-
 ![alt text](https://user-images.githubusercontent.com/72944387/127710362-c381c48e-98b4-404c-879e-27c8fcb8d026.mp4)
-![alt text](https://raw.githubusercontent.com/Ayush8120/Improved-MR-DFS-PX4/main/City%20Simulation/8_th_UAV_animation.gif)
-
 
 The algorith has its implementation in [MATLAB](link) but in this repository we focus on python + ROS + Gazebo simulations
 
@@ -74,6 +70,8 @@ Other required files for the city simulation are kept in City Simulation folder.
 - Add the world files
 - Replace the launch file
 - Models of Police Station, landing mat and grass plane are kept in the models file. Add them to your models folder at the location PX4-firware-clone/Tools/sitl_gazebo/models
+
+![GIF](https://raw.githubusercontent.com/Ayush8120/Improved-MR-DFS-PX4/main/City%20Simulation/8_th_UAV_animation.gif)
 
 The tree structure's cordinates were calculated using a MATLAB program (link to the MATLAB repository - with the 10 leaf node program)
 
