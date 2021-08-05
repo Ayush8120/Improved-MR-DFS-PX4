@@ -8,8 +8,8 @@ Performed on Ubuntu 18.04 - Gazebo 9
 
 
 
-https://user-images.githubusercontent.com/72944387/127710362-c381c48e-98b4-404c-879e-27c8fcb8d026.mp4
-
+![alt text](https://user-images.githubusercontent.com/72944387/127710362-c381c48e-98b4-404c-879e-27c8fcb8d026.mp4)
+![alt text](https://raw.githubusercontent.com/Ayush8120/Improved-MR-DFS-PX4/main/City%20Simulation/8_th_UAV_animation.gif)
 
 
 The algorith has its implementation in [MATLAB](link) but in this repository we focus on python + ROS + Gazebo simulations
