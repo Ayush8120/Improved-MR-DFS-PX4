@@ -7,6 +7,7 @@ Performed on Ubuntu 18.04 - Gazebo 9
 [YouTube Video - City Simulation](https://youtu.be/wWeWIQ98zS8)
 
 https://user-images.githubusercontent.com/72944387/127710362-c381c48e-98b4-404c-879e-27c8fcb8d026.mp4
+![Video](https://youtu.be/wWeWIQ98zS8)
 
 The algorith has its implementation in [MATLAB](link) but in this repository we focus on python + ROS + Gazebo simulations
 
