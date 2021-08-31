@@ -6,9 +6,10 @@ Performed on Ubuntu 18.04 - Gazebo 9
 
 [YouTube Video - City Simulation](https://youtu.be/wWeWIQ98zS8)
 
-![Video](https://youtu.be/wWeWIQ98zS8)
+https://user-images.githubusercontent.com/72944387/127710362-c381c48e-98b4-404c-879e-27c8fcb8d026.mp4
 
-The algorith has its implementation in [MATLAB](link) but in this repository we focus on python + ROS + Gazebo simulations
+
+The algorith has its implementation in [MATLAB](https://github.com/Ayush8120/MR-DFS) but in this repository we focus on python + ROS + Gazebo simulations
 
 
 [Step 1](https://docs.px4.io/master/en/ros/mavros_installation.html) MAVROS installation
@@ -41,10 +42,8 @@ In case you feel stuck with the steps here is a YouTube video to sail you throug
 ---
 
 -------------
-- Replace empty.world in the Tools/sitl_gazebo/worlds with [this](link to empty.world)
-- Add the landing_station model in Tools/sitl_gazebo/models {these are repsonsible for the landing markers}
 - replace [these](link to launch folder) launch files with the ones already present in launch folder in PX4 git clone
-- make a catkin workspace and add ayush package to it. This contains all code and nodes that need to be run for simulation
+- make a catkin workspace and add [ayush](https://github.com/Ayush8120/Improved-MR-DFS-PX4/tree/main/ayush) package to it. This contains all code and nodes that need to be run for simulation
 -------------
 
 ---
@@ -54,7 +53,7 @@ In case you feel stuck with the steps here is a YouTube video to sail you throug
 This will launch the empty world contatining grass plane, Police Station, Landing Mat and 10 Iris Drones.
 
 -------------------------
-#City Simulation
+##Descripton of The World & Simulation Specifices
 
 In ayush package there are 10 nodes corresponding to 10 UAVs used for city simulation.
 Other required files for the city simulation are kept in City Simulation folder.
