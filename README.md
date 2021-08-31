@@ -42,7 +42,10 @@ In case you feel stuck with the steps here is a YouTube video to sail you throug
 ---
 
 -------------
-- replace [these](link to launch folder) launch files with the ones already present in launch folder in PX4 git clone
+##Simulation of our program
+- - Models of Police Station, landing mat and grass plane are kept in the [models](https://github.com/Ayush8120/Improved-MR-DFS-PX4/tree/main/models) file. Add them to your models folder at the location PX4-firware-clone/Tools/sitl_gazebo/models
+- Add the [world](https://github.com/Ayush8120/Improved-MR-DFS-PX4/tree/main/worlds) files at PX4-firware-clone/Tools/sitl_gazebo/worlds
+- replace [these](https://github.com/Ayush8120/Improved-MR-DFS-PX4/tree/main/launch) launch files with the ones already present at PX4-firware-clone/launch
 - make a catkin workspace and add [ayush](https://github.com/Ayush8120/Improved-MR-DFS-PX4/tree/main/ayush) package to it. This contains all code and nodes that need to be run for simulation
 -------------
 
@@ -55,11 +58,14 @@ This will launch the empty world contatining grass plane, Police Station, Landin
 -------------------------
 ##Descripton of The World & Simulation Specifices
 
-In ayush package there are 10 nodes corresponding to 10 UAVs used for city simulation.
-Other required files for the city simulation are kept in City Simulation folder.
-- Add the world files
-- Replace the launch file
-- Models of Police Station, landing mat and grass plane are kept in the models file. Add them to your models folder at the location PX4-firware-clone/Tools/sitl_gazebo/models
+In ayush package there are 10 nodes corresponding to 10 UAVs used for city simulation. 
+- 10 iris drones take off from the roof of the station
+- go at the leaf nodes and wait for further command 
+- as soon as they are given command they start exploration
+- upon finishing the exploration they return back to the base station
+  
+Results for the city simulation are kept in [City Simulation Results](https://github.com/Ayush8120/Improved-MR-DFS-PX4/tree/main/City%20Simulation%20Results) folder.
+
 
 If you wish to play around with the dimensions/color of the drone then you can edit them at PX4-firmware-clone/Tools/sutl_gazebo/models/iris/iris.sdf.jinja
 
