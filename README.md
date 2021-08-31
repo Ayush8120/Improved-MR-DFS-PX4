@@ -6,7 +6,7 @@ Performed on Ubuntu 18.04 - Gazebo 9
 
 [YouTube Video - City Simulation](https://youtu.be/wWeWIQ98zS8)
 
-https://user-images.githubusercontent.com/72944387/127710362-c381c48e-98b4-404c-879e-27c8fcb8d026.mp4
+https://user-images.githubusercontent.com/72944387/131508312-d517a2bd-c208-46f3-9a60-1fca191ec3b0.mp4
 
 
 The algorith has its implementation in [MATLAB](https://github.com/Ayush8120/MR-DFS) but in this repository we focus on python + ROS + Gazebo simulations
