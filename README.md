@@ -11,13 +11,12 @@ https://user-images.githubusercontent.com/72944387/131508312-d517a2bd-c208-46f3-
 
 The algorith has its implementation in [MATLAB](https://github.com/Ayush8120/MR-DFS) but in this repository we focus on python + ROS + Gazebo simulations
 
-
+-----------------
 [Step 1](https://docs.px4.io/master/en/ros/mavros_installation.html) MAVROS installation
 In case you feel stuck with the steps here is a YouTube video to sail you through this step -[Video](https://www.youtube.com/watch?v=jBTikChu02E) 
-
-
+-----------------
 [Step 2](https://docs.px4.io/master/en/simulation/ros_interface.html) Getting 1 drone in world
-
+--------
 ---
 	cd <PX4-Autopilot_clone>
 	DONT_RUN=1 make px4_sitl_default gazebo
