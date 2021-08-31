@@ -57,13 +57,13 @@ Simulation of our program
 This will launch the empty world contatining grass plane, Police Station, Landing Mat and 10 Iris Drones.
 
 -------------------------
-Descripton of The World & Simulation Specifices
+Description of The World & Simulation Specifices
 ----------------------------
 In ayush package there are 10 nodes corresponding to 10 UAVs used for city simulation. 
 - 10 iris drones take off from the roof of the station
-- go at the leaf nodes and wait for further command 
-- as soon as they are given command they start exploration
-- upon finishing the exploration they return back to the base station
+- Go at the leaf nodes and wait for further command 
+- As soon as they are given command they start exploration
+- Upon finishing the exploration they return back to the base station
   
 Results for the city simulation are kept in [City Simulation Results](https://github.com/Ayush8120/Improved-MR-DFS-PX4/tree/main/City%20Simulation%20Results) folder.
 
