@@ -42,7 +42,7 @@ In case you feel stuck with the steps here is a YouTube video to sail you throug
 ---
 
 -------------
-##Simulation of our program
+Simulation of our program
 ----------------------------
 - Models of Police Station, landing mat and grass plane are kept in the [models](https://github.com/Ayush8120/Improved-MR-DFS-PX4/tree/main/models) file. Add them to  your models folder at the location PX4-firware-clone/Tools/sitl_gazebo/models
 - Add the [world](https://github.com/Ayush8120/Improved-MR-DFS-PX4/tree/main/worlds) files at PX4-firware-clone/Tools/sitl_gazebo/worlds
@@ -57,8 +57,8 @@ In case you feel stuck with the steps here is a YouTube video to sail you throug
 This will launch the empty world contatining grass plane, Police Station, Landing Mat and 10 Iris Drones.
 
 -------------------------
-##Descripton of The World & Simulation Specifices
-
+Descripton of The World & Simulation Specifices
+----------------------------
 In ayush package there are 10 nodes corresponding to 10 UAVs used for city simulation. 
 - 10 iris drones take off from the roof of the station
 - go at the leaf nodes and wait for further command 
