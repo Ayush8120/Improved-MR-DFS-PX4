@@ -49,18 +49,9 @@ In case you feel stuck with the steps here is a YouTube video to sail you throug
 
 ---
 	roslaunch px4 multi_uav_macros_sitl.launch
-	roslaunch ayush best.launch 
+	roslaunch ayush city.launch 
 ---
-This will launch the empty world contatining nodes and a basic implementation of the algorithm
-
-
-
-
-
-
-
-
-
+This will launch the empty world contatining grass plane, Police Station, Landing Mat and 10 Iris Drones.
 
 -------------------------
 #City Simulation
@@ -70,6 +61,8 @@ Other required files for the city simulation are kept in City Simulation folder.
 - Add the world files
 - Replace the launch file
 - Models of Police Station, landing mat and grass plane are kept in the models file. Add them to your models folder at the location PX4-firware-clone/Tools/sitl_gazebo/models
+
+If you wish to play around with the dimensions/color of the drone then you can edit them at PX4-firmware-clone/Tools/sutl_gazebo/models/iris/iris.sdf.jinja
 
 ![8th Robot Path GIF ](https://raw.githubusercontent.com/Ayush8120/Improved-MR-DFS-PX4/main/City%20Simulation/8_th_UAV_animation.gif)
 

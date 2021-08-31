@@ -11,6 +11,8 @@ import networkx as nx
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+from mpl_toolkits.mplot3d import Axes3D
 from ayush.second_step_on_vertex_visit import second_step_on_vertex_visit
 from ayush.initialize_graph import Robot,Vertex, build_graph, find_shortest_path
 from ayush.first_step_on_vertex_visit import Id,what_to_do_if_next_node_known,first_step_on_arriving_at_vertex
@@ -59,6 +61,15 @@ pose.pose.position.z = spawn_location[14] + 5
 
 threshold = 0.1
 
+# ANIMATION FUNCTION
+def func(num, dataSet, line, redDots):
+    # NOTE: there is no .set_data() for 3 dim data...
+    line.set_data(dataSet[0:2, :num])    
+    line.set_3d_properties(dataSet[2, :num])    
+    redDots.set_data(dataSet[0:2, :num])    
+    redDots.set_3d_properties(dataSet[2, :num]) 
+    return line
+
 def algorithm():
     #Topography 
     K = 10
@@ -80,7 +91,7 @@ def algorithm():
     for ed in edges_decomp:
         # print(*ed)
         G.add_edge(*ed)
-    nx.draw(G,with_labels = True, font_weight = 'bold')
+    # nx.draw(G,with_labels = True, font_weight = 'bold')
     #--------------------------------------------------------------
 
     #plt.show
@@ -105,6 +116,10 @@ def algorithm():
 
 
     for k in range(K):
+
+        R[k].setpoint_list.append(spawn_location[3*k])
+        R[k].setpoint_list.append(spawn_location[3*k + 1])
+        R[k].setpoint_list.append(spawn_location[3*k +2] + k+1)
         #print(R[k].present_location)
         start = R[k].present_location
         #print(V[ord(R[k].present_location) - 65].neighbors[0])
@@ -114,15 +129,15 @@ def algorithm():
         bottom = np.array([-1*incidence_matrix[ord(end) - 65,ord(start)-65]])
         col_vector = np.vstack((top,bottom))
         #Setpoint - 1 as the leaf node location while the height is kept constant
-        R[k].setpoint_list.append(XData[ord(R[k].present_location) - 65]*50)
-        R[k].setpoint_list.append(YData[ord(R[k].present_location) - 65]*50)
+        R[k].setpoint_list.append(XData[ord(R[k].present_location) - 65]*25)
+        R[k].setpoint_list.append(YData[ord(R[k].present_location) - 65]*25)
         R[k].setpoint_list.append(spawn_location[3*k +2] + k+1)
         
         #print("The {e} robot is currently at {f}".format(e=k,f=R[k].present_location))
         #print("The next node chosen is {}".format(V[ord(R[k].present_location) - 65].neighbors[0]))
         
-        R[k].setpoint_list.append(XData[ord(V[ord(R[k].present_location) - 65].neighbors[0]) - 65]*50)
-        R[k].setpoint_list.append(YData[ord(V[ord(R[k].present_location) - 65].neighbors[0]) - 65]*50)
+        R[k].setpoint_list.append(XData[ord(V[ord(R[k].present_location) - 65].neighbors[0]) - 65]*25)
+        R[k].setpoint_list.append(YData[ord(V[ord(R[k].present_location) - 65].neighbors[0]) - 65]*25)
         R[k].setpoint_list.append(spawn_location[3*k +2] + k+1)
         rospy.loginfo('Setpoint Addded!')
         id,R,V = what_to_do_if_next_node_known(R,k,V,1,R[k].present_location,V[ord(R[k].present_location) - 65].neighbors[0],incidence_matrix=incidence_matrix)
@@ -130,8 +145,8 @@ def algorithm():
         R[k].next_edge_decided,count = second_step_on_vertex_visit(graph, V,R,k,count)
 
         #print('The next edge selected by - ' + str(k) + '- robot is' + str(R[k].next_edge_decided))
-        R[k].setpoint_list.append(XData[ord(R[k].next_edge_decided.replace(R[k].present_location,'')) - 65]*50)
-        R[k].setpoint_list.append(YData[ord(R[k].next_edge_decided.replace(R[k].present_location,'')) - 65]*50)
+        R[k].setpoint_list.append(XData[ord(R[k].next_edge_decided.replace(R[k].present_location,'')) - 65]*25)
+        R[k].setpoint_list.append(YData[ord(R[k].next_edge_decided.replace(R[k].present_location,'')) - 65]*25)
         R[k].setpoint_list.append(spawn_location[3*k +2] + k+1)
         rospy.loginfo('Setpoint Addded!')
         #print('')
@@ -148,8 +163,8 @@ def algorithm():
                     #flying_function(XData[ord(R[z].next_edge_decided.replace(R[z].present_location,'')) - 65], YData[ord(R[z].next_edge_decided.replace(R[z].present_location,'')) - 65], z+1)              
                     R[z].next_edge_decided,count = second_step_on_vertex_visit(graph, V,R,z,count)
                     if R[z].next_edge_decided !=0:
-                        R[z].setpoint_list.append(XData[ord(R[z].next_edge_decided.replace(R[z].present_location,'')) - 65]*50)
-                        R[z].setpoint_list.append(YData[ord(R[z].next_edge_decided.replace(R[z].present_location,'')) - 65]*50)
+                        R[z].setpoint_list.append(XData[ord(R[z].next_edge_decided.replace(R[z].present_location,'')) - 65]*25)
+                        R[z].setpoint_list.append(YData[ord(R[z].next_edge_decided.replace(R[z].present_location,'')) - 65]*25)
                         R[z].setpoint_list.append(spawn_location[3*z +2] + z+1)
                         rospy.loginfo('Setpoint Addded!')
                         #print('The next edge selected by : ' + str(z) + ' : robot is :' + str(R[z].next_edge_decided))
@@ -176,6 +191,28 @@ def position_control():
     prev_state = current_state
     rate = rospy.Rate(20.0) # MUST be more then 2Hz
 
+    dataSet = np.array(list_of_setpoints4)
+    numDataPoints = len(list_of_setpoints4)//3
+    dataSet = np.reshape(dataSet,(numDataPoints,3))
+    dataSet = np.transpose(dataSet)
+    print(dataSet)
+    # GET SOME MATPLOTLIB OBJECTS
+    fig = plt.figure()
+    ax = Axes3D(fig)
+    redDots = plt.plot(dataSet[0], dataSet[1], dataSet[2], lw=2, c='r', marker='o')[0] # For scatter plot
+    # NOTE: Can't pass empty arrays into 3d version of plot()
+    line = plt.plot(dataSet[0], dataSet[1], dataSet[2], lw=2, c='g')[0] # For line plot
+    
+    # AXES PROPERTIES]
+    # ax.set_xlim3d([limit0, limit1])
+    ax.set_xlabel('X(t)')
+    ax.set_ylabel('Y(t)')
+    ax.set_zlabel('Z(t)')
+    ax.set_title('Trajectory of 4th UAV')
+    
+    # Creating the Animation object
+    line_ani = animation.FuncAnimation(fig, func, frames=numDataPoints, fargs=(dataSet,line,redDots), interval=150, blit=False)
+    line_ani.save(r'4_th_UAV_animation.gif')
     # send a few setpoints before starting
     for i in range(100):
         local_pos_pub.publish(pose)
@@ -188,6 +225,10 @@ def position_control():
     for i in range(num_of_points):
         print(i)
         last_request = rospy.get_rostime()
+        if i ==2:
+            ayushtrial = input()
+        else:
+            ayushtrial = 1
         #substract personal
         while not rospy.is_shutdown() and not drone_reached(list_of_setpoints4[3*i] - spawn_location[12],list_of_setpoints4[3*i+1] - spawn_location[13],list_of_setpoints4[3*i+2] - spawn_location[14]):
             now = rospy.get_rostime()
@@ -214,11 +255,14 @@ def position_control():
             pose.pose.position.z = list_of_setpoints4[3*i+2]  - spawn_location[14]#initial_height
             local_pos_pub.publish(pose)
             #print('here!!')
+            # plt.scatter(new_pose.pose.position.x/50 , new_pose.pose.position.y/50, marker = '.', color='orange')
+            # plt.draw()
             rate.sleep()
 
 if __name__ == '__main__':
     try:
         #print('D')
         position_control()
+        # plt.savefig("4_city_uav_route_yo_final_run.png")
     except rospy.ROSInterruptException:
         pass
