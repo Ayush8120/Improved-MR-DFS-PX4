@@ -2,22 +2,21 @@
 Improved Multi-Robot Depth First Search Algorithm implementation using iris drones using PX4.
 Performed on Ubuntu 18.04 - Gazebo 9
 
-
+[![Gazebo Simulation](https://user-images.githubusercontent.com/72944387/131549432-65f312da-20f9-43bc-9f86-c7fa6aecff77.png)](https://www.youtube.com/watch?v=wWeWIQ98zS8 "Decentralized Multi-drone Terrain Exploration")
 
 [YouTube Video - City Simulation](https://youtu.be/wWeWIQ98zS8)
 
-https://user-images.githubusercontent.com/72944387/127710362-c381c48e-98b4-404c-879e-27c8fcb8d026.mp4
+https://user-images.githubusercontent.com/72944387/131508312-d517a2bd-c208-46f3-9a60-1fca191ec3b0.mp4
 
 
 The algorith has its implementation in [MATLAB](https://github.com/Ayush8120/MR-DFS) but in this repository we focus on python + ROS + Gazebo simulations
 
-
+-----------------
 [Step 1](https://docs.px4.io/master/en/ros/mavros_installation.html) MAVROS installation
 In case you feel stuck with the steps here is a YouTube video to sail you through this step -[Video](https://www.youtube.com/watch?v=jBTikChu02E) 
-
-
+-----------------
 [Step 2](https://docs.px4.io/master/en/simulation/ros_interface.html) Getting 1 drone in world
-
+--------
 ---
 	cd <PX4-Autopilot_clone>
 	DONT_RUN=1 make px4_sitl_default gazebo
@@ -42,7 +41,11 @@ In case you feel stuck with the steps here is a YouTube video to sail you throug
 ---
 
 -------------
-- replace [these](link to launch folder) launch files with the ones already present in launch folder in PX4 git clone
+Simulation of our program
+----------------------------
+- Models of Police Station, landing mat and grass plane are kept in the [models](https://github.com/Ayush8120/Improved-MR-DFS-PX4/tree/main/models) file. Add them to  your models folder at the location PX4-firware-clone/Tools/sitl_gazebo/models
+- Add the [world](https://github.com/Ayush8120/Improved-MR-DFS-PX4/tree/main/worlds) files at PX4-firware-clone/Tools/sitl_gazebo/worlds
+- replace [these](https://github.com/Ayush8120/Improved-MR-DFS-PX4/tree/main/launch) launch files with the ones already present at PX4-firware-clone/launch
 - make a catkin workspace and add [ayush](https://github.com/Ayush8120/Improved-MR-DFS-PX4/tree/main/ayush) package to it. This contains all code and nodes that need to be run for simulation
 -------------
 
@@ -53,13 +56,16 @@ In case you feel stuck with the steps here is a YouTube video to sail you throug
 This will launch the empty world contatining grass plane, Police Station, Landing Mat and 10 Iris Drones.
 
 -------------------------
-##Descripton of The World & Simulation Specifices
+Description of The World & Simulation Specifices
+----------------------------
+In ayush package there are 10 nodes corresponding to 10 UAVs used for city simulation. 
+- 10 iris drones take off from the roof of the station
+- Go at the leaf nodes and wait for further command 
+- As soon as they are given command they start exploration
+- Upon finishing the exploration they return back to the base station
+  
+Results for the city simulation are kept in [City Simulation Results](https://github.com/Ayush8120/Improved-MR-DFS-PX4/tree/main/City%20Simulation%20Results) folder.
 
-In ayush package there are 10 nodes corresponding to 10 UAVs used for city simulation.
-Other required files for the city simulation are kept in City Simulation folder.
-- Add the world files
-- Replace the launch file
-- Models of Police Station, landing mat and grass plane are kept in the models file. Add them to your models folder at the location PX4-firware-clone/Tools/sitl_gazebo/models
 
 If you wish to play around with the dimensions/color of the drone then you can edit them at PX4-firmware-clone/Tools/sutl_gazebo/models/iris/iris.sdf.jinja
 

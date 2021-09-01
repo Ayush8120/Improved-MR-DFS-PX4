@@ -145,44 +145,44 @@ lgd = legend;
 i = 1;
 
 while 1
-    if length(path_0_x) > i
+    if length(path_0_x) >= i
         addpoints(curve1,path_0_x(1,i),path_0_y(1,i),path_0_z(1));
         
         set(head1, 'xdata', path_0_x(1,i),'ydata',path_0_y(1,i),'zdata',path_0_z(1,1));
     end
-    if length(path_1_x) > i
+    if length(path_1_x) >= i
         addpoints(curve2,path_1_x(1,i),path_1_y(1,i),path_1_z(1));
         set(head2, 'xdata', path_1_x(1,i),'ydata',path_1_y(1,i),'zdata', path_1_z(1,1));
     end
-    if length(path_2_x) > i
+    if length(path_2_x) >= i
         addpoints(curve3,path_2_x(1,i),path_2_y(1,i),path_2_z(1));
         set(head3, 'xdata', path_2_x(1,i),'ydata', path_2_y(1,i),'zdata', path_2_z(1,1));
     end
-    if length(path_3_x) > i
+    if length(path_3_x) >= i
         addpoints(curve4,path_3_x(1,i),path_3_y(1,i),path_3_z(1));
         set(head4, 'xdata', path_3_x(1,i),'ydata', path_3_y(1,i),'zdata', path_3_z(1,1));
     end
-    if length(path_9_x) > i
+    if length(path_9_x) >= i
         addpoints(curve10,path_9_x(1,i),path_9_y(1,i),path_9_z(1));
         set(head10, 'xdata', path_9_x(1,i),'ydata', path_9_y(1,i),'zdata', path_9_z(1,1));
     end
-    if length(path_4_x) > i
+    if length(path_4_x) >= i
         addpoints(curve5,path_4_x(1,i),path_4_y(1,i),path_4_z(1));
         set(head5, 'xdata', path_4_x(1,i),'ydata', path_4_y(1,i),'zdata', path_4_z(1,1));
     end
-    if length(path_5_x) > i
+    if length(path_5_x) >= i
         addpoints(curve6,path_5_x(1,i),path_5_y(1,i),path_5_z(1));
         set(head6, 'xdata', path_5_x(1,i),'ydata', path_5_y(1,i),'zdata', path_5_z(1,1));
     end
-    if length(path_6_x) > i
+    if length(path_6_x) >= i
         addpoints(curve7,path_6_x(1,i),path_6_y(1,i),path_6_z(1));
         set(head7, 'xdata', path_6_x(1,i),'ydata', path_6_y(1,i),'zdata', path_6_z(1,1));
     end
-    if length(path_7_x) > i
+    if length(path_7_x) >= i
         addpoints(curve8,path_7_x(1,i),path_7_y(1,i),path_7_z(1));
         set(head8, 'xdata', path_7_x(1,i),'ydata', path_7_y(1,i),'zdata', path_7_z(1,1));
     end
-    if length(path_8_x) > i
+    if length(path_8_x) >= i
         addpoints(curve9,path_8_x(1,i),path_8_y(1,i),path_8_z(1));
         set(head9, 'xdata', path_8_x(1,i),'ydata', path_8_y(1,i),'zdata', path_8_z(1,1));
     end
@@ -194,20 +194,3 @@ while 1
     i = i + 1;
 end
 
-%ode45 numerical integration
-function dr_dt = myode45function(t,r)
-
-%L = [6 0 -6 0;-2 3 -1 0;0 0 2 -2;-1 -4 0 5];
-L = [5 -5 0 0 ;0 4 -2.5 -1.5 ;-1.5 0 3.8 -2.3 ;-3.2 0 -1.3 4.5];
-%L = [4 0 -4 0; -2 3 -1 0; 0 0 2 -2; -1 -4 0 5];
-gp = 12.2307;
-kp = 2;
-R = [ -0.8116081,  0.0305878,  0.5834009;
-       0.5267739, -0.3934565,  0.7534595;
-       0.2525896,  0.9188343,  0.3032196 ];
-I = eye(12);
-
-K = kron(L,R);
-A = -gp.*I - kp.*K;
-dr_dt = A*r;
-end
