@@ -2,9 +2,9 @@
 Improved Multi-Robot Depth First Search Algorithm implementation using iris drones using PX4.
 Performed on Ubuntu 18.04 - Gazebo 9
 
-[![Gazebo Simulation](https://user-images.githubusercontent.com/72944387/131549432-65f312da-20f9-43bc-9f86-c7fa6aecff77.png)](https://www.youtube.com/watch?v=wWeWIQ98zS8 "Decentralized Multi-drone Terrain Exploration")
+[![Gazebo Simulation](https://user-images.githubusercontent.com/72944387/131549432-65f312da-20f9-43bc-9f86-c7fa6aecff77.png)](https://www.youtube.com/watch?v=lXl8jqp82uI "Decentralized Multi-Drone Terrain Exploration")
 
-[YouTube Video - City Simulation](https://youtu.be/wWeWIQ98zS8)
+[YouTube Video - City Simulation](https://www.youtube.com/watch?v=lXl8jqp82uI)
 
 
 
