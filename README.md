@@ -45,9 +45,9 @@ Clone the PX4-Autopilot Git Repository : [link](https://github.com/PX4/PX4-Autop
 	export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd):$(pwd)/Tools/sitl_gazebo
 	roslaunch px4 multi_uav_mavros_sitl.launch
 ---
-
+![Algorithm](https://user-images.githubusercontent.com/72944387/133897913-592bf7c6-ad39-40e1-ab13-e0d785fca924.png)
 -------------
-Simulation of our program
+Simulation of our program 
 ----------------------------
 - Models of Police Station, landing mat and grass plane are kept in the [models](https://github.com/Ayush8120/Improved-MR-DFS-PX4/tree/main/models) file. Add them to  your models folder at the location PX4-firware-clone/Tools/sitl_gazebo/models
 - Add the [world](https://github.com/Ayush8120/Improved-MR-DFS-PX4/tree/main/worlds) files at PX4-firware-clone/Tools/sitl_gazebo/worlds
