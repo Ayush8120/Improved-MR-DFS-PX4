@@ -45,7 +45,10 @@ Clone the PX4-Autopilot Git Repository : [link](https://github.com/PX4/PX4-Autop
 	export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd):$(pwd)/Tools/sitl_gazebo
 	roslaunch px4 multi_uav_mavros_sitl.launch
 ---
-![Algorithm](https://user-images.githubusercontent.com/72944387/133897913-592bf7c6-ad39-40e1-ab13-e0d785fca924.png)
+![Overall Algorithm](https://user-images.githubusercontent.com/72944387/133897913-592bf7c6-ad39-40e1-ab13-e0d785fca924.png)
+![Order Matrix Algorithm](https://user-images.githubusercontent.com/72944387/133905628-57ed0997-77f3-4004-9e4f-ba2f78eec34a.png)
+![Second Step at Vertex](https://user-images.githubusercontent.com/72944387/133905654-8305b37f-5763-4b16-b0d4-450c73210702.png)
+
 -------------
 Simulation of our program 
 ----------------------------
