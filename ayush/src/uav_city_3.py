@@ -209,7 +209,7 @@ def position_control():
     ax.set_title('Trajectory of 3rd UAV')
     
     # Creating the Animation object
-    line_ani = animation.FuncAnimation(fig, func, frames=numDataPoints, fargs=(dataSet,line,redDots), interval=150, blit=False)
+    line_ani = animation.FuncAnimation(fig, func, frames=numDataPoints + 1, fargs=(dataSet,line,redDots), interval=150, blit=False)
     line_ani.save(r'3_rd_UAV_animation.gif')
     # send a few setpoints before starting
     for i in range(100):
