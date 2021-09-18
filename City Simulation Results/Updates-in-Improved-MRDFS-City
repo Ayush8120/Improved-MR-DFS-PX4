@@ -2,30 +2,10 @@ What are the updates?
 - I have trajectory of all the drones; have individual trajectory as well
 - I have the node names as their setpoints list {R[k].path} 
 - I have the program in mR-DFS that gives me the necessary understanding links of how the algorithm functions
-- have to think how to present it beautifully
-
-
-
-
-#TODO : Kuch bhi karke Map ke upar super impose karna trajectories on the map.
-Record videos with color changed as yellow/white/red
-
-3D gif ko debug karna
-2D Gif bana dena as well
-
-Nail it dude.. please
-
-
-
-
-Add the city.launch in this launch folder.
-
-multiplying by 50
-
 
 The node cordinates in world file are just for simulation purpose
-the XData oioin the code will remain original only
-another list will be made : XDataPro : this contains node location that are corresponding to the simulation cordinates.Just so that when giving setpoints we know where to command it to go
+the XData in the code will remain original only
+another list will be made : XDataPro : this contains node location that are corresponding to the simulation cordinates. Just so that when giving setpoints we know where to command it to go
 
 
 
@@ -79,6 +59,8 @@ V-275 500 0
 W-250 550 0
 X-300 550 0
 
+Classification in 9 Roads:
+
 AC - R1 +
 BC - R3 =  
 CD - R1 +
@@ -102,3 +84,5 @@ SU - R8
 UV - R8
 VW - R8
 VX - R9
+
+---Modify the GIFs
