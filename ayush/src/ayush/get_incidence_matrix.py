@@ -2,13 +2,17 @@ import rospy
 import math
 import numpy as np
 from networkx.linalg.graphmatrix import incidence_matrix
-
+'''
+Creates Incidence Matrix according to the convention defined in the Research paper
+Arguments: X Cordinates, Y Cordinates , Graph created by networkx 
+Returns: incidence_angle_matrix
+'''
 def get_incidence_matrix(XData, YData, G):
 
     incidence_angle_matrix = np.zeros((len(XData),len(XData)))
    
     for i in range(len(XData)):                     #start point
-        for j in range(len(XData)):                 #%end point
+        for j in range(len(XData)):                 #end point
             if(i==j):
                 incidence_angle_matrix[i,j] = 0
             else:

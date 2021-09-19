@@ -1,16 +1,23 @@
-#Requires re check
 import rospy
 import numpy as np
 import pandas as pd
 
 #Again here, the I_merged given by mergematrices.py is a pandas Dataframe
 #we'll convert it to np array --> do computations and then reconvert it to pd.DataFrame 
+'''
+Order Matrix Algorithm : 
+    - Arranges the merged matrix as Completed edges, Out edges and unexplored edges from left to right.
+    - uses 3 functions :
+        Completed()
+        Out()
+        Unexplored()
+'''
+
 def order_matrix(I_merged, E1_cap):
-    #print(I_merged) #latst
+    
     names_I_merged = list(I_merged.index.values) #extracting row_tags
     edges_I_merged = list(I_merged.columns.values) #extracting edge_tags
-    #print(names_I_merged) ##latst
-    #print(edges_I_merged) #latst
+    
     I = I_merged.to_numpy() # converting to numpy array
     [V,E] = np.shape(I)
     E2_cap = E - E1_cap
@@ -35,31 +42,28 @@ def order_matrix(I_merged, E1_cap):
 
     if len(unexp_I2) != 0:
         unexp_I2 = [e + E1_cap for e in unexp_I2]
-    #print(a) #latst
-    #print(a1) #latst
-    #print(b) #latst
-    #print(b1) #latst
-    #print(c) #latst
-    #print(c1) #latst
+    
     temp_list = [a,a1,b,b1,c,c1]
     copy_list = [a,a1,b,b1,c,c1]
+
     for w in temp_list :
         if len(w) == 0:
             copy_list.remove(w)
-            #print("YOYO") #latst
-        #print(copy_list) #latst
-    #I_ordered = np.concatenate((a,a1,b,b1,c,c1),axis=0) # converting back to pandas DataFrame
+
     I_ordered = np.concatenate(copy_list,axis=0)
     I_ordered = np.transpose(I_ordered)
     column_index = comp_I1+ comp_I2 + out_I1 + out_I2 + unexp_I1 + unexp_I2
+    #Converting back to Panadas dataframe
     I_ordered = pd.DataFrame(data = I_ordered,
                 index = names_I_merged,
-                #columns = edges_I_merged[np.concatenate((comp_I1,comp_I2,out_I1,out_I2,unexp_I1,unexp_I2),axis=0)]
                 columns = [edges_I_merged[i] for i in column_index]
-                
                 )
     return I_ordered, completed_edge_count
-
+'''
+Use : To give out the completed edges/columns
+Arguments: Merged Matrix
+Returns: concatenated columns of completed edges , number of such edges found
+'''
 def completed(merged_matrix):
     [r,c] = np.shape(merged_matrix)
     temp = merged_matrix
@@ -70,7 +74,12 @@ def completed(merged_matrix):
             completed_edges.append(merged_matrix[:,i]) #concatenated column vectors classified as completed edges
             comp_index.append(i) #list of index of columns classified as completed edges
     return completed_edges, comp_index
-
+    
+'''
+Use : To give the outgoing edges/columns
+Arguments: Merged Matrix
+Returns: concatenated columns of outgoing edges , number of such edges found
+'''
 def out(merged_matrix):
     [r,c] = np.shape(merged_matrix)
     temp = merged_matrix
@@ -82,6 +91,11 @@ def out(merged_matrix):
             out_index.append(i) #list of index of columns classified as out_edges
     return out_edges, out_index
 
+'''
+Use : To give out the unexplored edges/columns
+Arguments: Merged Matrix
+Returns: concatenated columns of unexplored edges , number of such edges found
+'''
 def unexplored(merged_matrix):
     [r,c] = np.shape(merged_matrix)
     temp = merged_matrix
