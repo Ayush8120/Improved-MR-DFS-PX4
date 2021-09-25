@@ -1,6 +1,12 @@
 # Improved-MR-DFS-PX4
-Improved Multi-Robot Depth First Search Algorithm implementation using iris drones using PX4.
-Performed on Ubuntu 18.04 - Gazebo 9
+-----
+
+Implementation :
+----------
+[Nagavarapu, S.C., Vachhani, L. & Sinha, A. Multi-Robot Graph Exploration and Map Building with Collision Avoidance: A Decentralized Approach. J Intell Robot Syst 83, 503–523 (2016). https://doi.org/10.1007/s10846-015-0309-9](https://link.springer.com/article/10.1007/s10846-015-0309-9)
+
+	-Improved Multi-Robot Depth First Search Algorithm implementation using iris drones using PX4.
+	-Performed on Ubuntu 18.04 - Gazebo 9
 
 [![Gazebo Simulation](https://user-images.githubusercontent.com/72944387/131549432-65f312da-20f9-43bc-9f86-c7fa6aecff77.png)](https://www.youtube.com/watch?v=lXl8jqp82uI "Decentralized Multi-Drone Terrain Exploration")
 
